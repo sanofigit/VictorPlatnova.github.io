@@ -12,8 +12,9 @@ app.use(express.json())
 
 // contactForm
 app.get('/', (req,res ) => {
-    res.sendFile(__dirname + '/public/home.html')
+    res.sendFile(__dirname + '/public/index.html')
 })
+
 // contactForm
 app.post('/',(req,res) => {
     console.log(req.body)
