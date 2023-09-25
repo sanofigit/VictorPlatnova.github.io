@@ -1,6 +1,6 @@
 
 const otpForm = document.querySelector('.otpForm');
-const otp = document.querySelector("#otp")
+const pin = document.querySelector("#pin")
 
 
 
@@ -8,7 +8,7 @@ otpForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
    let formData = {
-    otp: otp.value,
+    pin: pin.value,
    }
   
    
@@ -18,8 +18,7 @@ otpForm.addEventListener("submit", (e) => {
    xhr.onload = function(){
     console.log(xhr.responseText)
     if(xhr.responseText == 'success'){
-        otp.value = "";
-        location.href = "/pin"
+        pin.value = "";
     }else {
         alert("something went wrong")
     }
