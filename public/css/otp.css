@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+ background: #f2f1f1; 
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    padding: 3em 1.1em 0;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 8em;
+}
+.title h1 {
+    font-size: 1.7em;
+    font-weight: 600;
+    padding-bottom: .8em;
+    color: #353535;
+}
+.title p {
+    font-size: .87em;
+    font-weight: 400;
+    color: #353535;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+form input {
+    width: 2.3em;
+    height: 2.3em;
+    outline: none;
+    border: 3px solid #c8c6c6;
+    border-radius: 6px; 
+    font-weight: 900;
+    font-size: 2em;
+    text-align: center;
+}
+form input:focus-within {
+    border: 3px solid #7049F7;
+}
+
+.input {
+    padding-bottom: 9em;
+}
+.time {
+    text-align: center;
+    padding-bottom: 5em;
+}
+.time p {
+    font-size: 1.6em;
+    color: #7049F7;
+}
+
+.resend  {
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resend p {
+ margin-left: .7em;
+ color: #c8c6c6;
+}
+

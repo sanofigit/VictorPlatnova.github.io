@@ -1,29 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/otp.css">
 </head>
 <body>
-    <div class="regSec">
-        <div class="contentSec">
-            <h1>Confirm Your Account </h1>
-            <p>Enter your confirmation pin and Login Pin to continue</p>
-        </div>
-        <div class="formSec">
-            <form class="otpForm" method="POST">
-                <label for="otp">OTP Pin</label>
-                <input id="otp" type="number" name="otp"  placeholder="confirmation pin" required>
-
-                <button type="submit" name="send" >Enter otp pin</button>
-            </form>
-            <div class="signIn">
-                go back to Login<p><a href="/pin">Sign up</a>
-            </div>
-        </div>
+   <div class="container">
+    <div class="title">
+        <h1>OTP Authorization</h1>
+        <p>We sent an OTP code to your email address  for the authorization of this action</p>
     </div>
+
+    <div class="input">
+        <form  method="post">
+        <input type="text" id="digit1" maxlength="1">
+        <input type="text" id="digit2" maxlength="1">
+        <input type="text" id="digit3" maxlength="1">
+        <input type="text" id="digit4" maxlength="1">
+        </form>
+    </div>
+        <div class="time">
+            <p>1:30</p>
+        </div>
+        <div class="resend">
+            <span>Didn't get an OTP?</span>
+            <p>
+                <i class="fa-solid fa-rotate-left"></i>
+            Resend Code
+            </p>
+        </div>
+   </div>
     <script src="/js/app.otp.js"></script>
 </body>
 </html>

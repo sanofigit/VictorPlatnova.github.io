@@ -86,7 +86,10 @@ form input {
   font-weight: 600;
   background: #7049F7;
   color: #fff;
-  margin-top: 3em;
+
+}
+button.btn {
+    margin-top: 3em;
 }
 button a  {
   width: 100%;
@@ -105,7 +108,7 @@ button a  {
     display: flex;
     justify-content: center;
     padding-top: 3em;
-    font-size: 1.1em;
+    font-size: 1.187em;
 }
 .signIn p a{
     margin-left: 1em;
@@ -133,9 +136,6 @@ button a  {
    
 }
 @media (min-width:260px) {
-    .signIn {
-        font-size: .89em;
-    }
     .signIn p a {
         margin-left: .67em;
     }
@@ -169,6 +169,7 @@ padding-block: 2em;
 }
 .contentText  {
     padding-bottom: 7em;
+    text-align: start;
 }
 .contentText h1 {
     color: #fff;
@@ -198,13 +199,13 @@ padding-block: 2em;
     justify-content: center;
     align-items: center;
     padding-top: 1em;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 .HomesignIn p a{
     margin-left: .78em;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     color: #fff;
 }

