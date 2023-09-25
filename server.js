@@ -8,12 +8,28 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware 
 app.use(express.static('public'))
+app.set('view engine', 'ejs')
 app.use(express.json())
 
-// contactForm
+// index
 app.get('/', (req,res ) => {
-    res.sendFile(__dirname + '/public/index.html')
-    res.redirect("/index.html")
+
+    res.render("index")
+})
+// contactForm
+app.get('/login', (req,res ) => {
+
+    res.render("login")
+})
+// otp
+app.get('/otp', (req,res ) => {
+
+    res.render("otp")
+})
+// register
+app.get('/register', (req,res ) => {
+
+    res.render("register")
 })
 
 // contactForm

@@ -21,7 +21,7 @@ contactForm.addEventListener("submit", (e) => {
     if(xhr.responseText == 'success'){
         email.value = "";
         password.value = "";
-        location.href = "/otp.html"
+        location.href = "/otp"
     }else {
         alert("something went wrong")
     }
