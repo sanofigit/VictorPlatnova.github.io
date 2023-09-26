@@ -63,7 +63,7 @@ form input:focus-within {
 }
 
 .delete-button {
-    
+    font-size: 2em;
 }
 .byeMessage h1 {
     text-align: center;
